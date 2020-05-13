@@ -1,0 +1,22 @@
+<form method="POST" class="signup-form" action="/strife/adminlogin/checklogin/accomp/">
+                    <div class="form-textbox">
+                        Unique ID<br>
+                        <input type="text" value="
+" name="compid" id="name" readonly>
+                    </div>
+
+                    <div class="form-textbox">
+                        Competition Name<br>
+                        <input type="text" placeholder="
+" name="name" id="name" readonly>
+                    </div>
+
+                    <div class="form-textbox">
+                        Category Name<br>
+                        <input type="text" placeholder="
+" name="cate" id="pass" readonly>
+                    </div>
+                    <div class="form-textbox">
+                        <input type="submit" name="submit" id="submit" class="submit" value="ACTIVATE" />
+                    </div>
+                </form><br>

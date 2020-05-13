@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Strife-Admin Login</title>
+    <meta charset="UTF-8">
+        <meta name="description" content="Strife is a powerful online test generator, that will automatically mark and calculate the result. Create and organize your online quiz, competition assesments for FREE. This website is absolutly free to organize online quiz competition. This is a online quiz creator. This tool is free online test creator for teachers, professors or anybody. You just need to register here!">
+        <meta name="keywords" content="free online test maker, online quiz competition, online quiz creator, online quiz to earn money, online quiz website, quiz website, online quiz maker, free online quiz maker multiple choice, free online assessment creator, test creator, free online test maker for teachers, easy test maker, Online test generator, online quiz maker, flexiquiz, test generator, quiz maker, exam builder, online quiz software, timed quiz maker, multiple choice quiz maker, exam creator">
+        <meta name="author" content="">
+    {% load static %}
+    <link rel="icon" type="image/png" href="{% static "images/icons/sicon.ico" %}"/>
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{% static "fonts/material-icon/css/material-design-iconic-font.min.css" %}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+</head>
+<body>
+
+    <div class="main">
+
+        <h1>ACTIVATED</h1>
+        <div class="container">
+            <div class="sign-up-content">
+                <h2 class="form-title">ACTIVATED</h2>
+                <p class="loginhere">
+                    <a href="/strife/adminlogin/backlogin/" class="loginhere-link">Back</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="common_section">
+        <div class="container">
+
+
+                    <a href="#" class="footer_logo"><img src="{% static "images/footer.png" %}" alt="" /></a>
+
+                    <div class="copyright">Copyright 2019 -
+                    <a href="http://www.strife.co.in/">www.strife.co.in</a>.<br><br>Please read our 
+                    <a href="/about-us/">Privacy Policy</a>.</div>
+
+        </div>
+        </div>
+
+    <!-- JS -->
+    <script src="{% static "vendor/jquery/jquery.min.js" %}"></script>
+    <script src="{% static "js/main.js" %}"></script>
+<script type="text/javascript">
+if (typeof(Storage)!=="undefined") {
+    localStorage.setItem("Email", document.getElementById("name").value);
+};
+</script>
+</body>
+</html>

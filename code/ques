@@ -1,0 +1,15 @@
+<input type="text" name="" id="quesid" value="" readonly>
+<label for="agree-term" class="label-agree-term">
+</label><br>
+<input type="radio" name="" id="option" class="agree-term" value="A">
+<label for="option" class="label-agree-term"><span><span></span></span>
+</label><br>
+<input type="radio" name="" id="option" class="agree-term" value="B">
+<label for="option" class="label-agree-term"><span><span></span></span>
+</label><br>
+<input type="radio" name="" id="option" class="agree-term" value="C">
+<label for="option" class="label-agree-term"><span><span></span></span>
+</label><br>
+<input type="radio" name="" id="option" class="agree-term" value="D">
+<label for="option" class="label-agree-term"><span><span></span></span>
+</label><br><br>

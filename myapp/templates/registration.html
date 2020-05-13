@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <!-- META -->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <!-- TITLE -->
+        <title>Strife-Registration</title>
+        <meta charset="UTF-8">
+        {% load static %}
+        <link rel="icon" type="image/png" href="{% static "images/icons/sicon.ico" %}"/>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{% static "styleour.css" %}">
+        <!-- Main StyleSheet -->
+        <link rel="stylesheet" href="{% static "fonts/material-icon/css/material-design-iconic-font.min.css" %}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+        <link href="{% static "style.css" %}" rel="stylesheet" type="text/css" />
+        <link href="{% static "style-responsive.css" %}" rel="stylesheet" type="text/css" media="screen" />
+        <link href="{% static "css/font-awesome.css" %}" rel="stylesheet" type="text/css" />
+        <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+        <link rel="stylesheet" href="{% static "css/libs/animate.css" %}">
+
+
+        <!-- bxSlider CSS file -->
+        <link href="{% static "css/jquery.bxslider.css" %}" rel="stylesheet" />
+
+
+        <!-- LayerSlider stylesheet -->
+        <link rel="stylesheet" href="{% static "layerslider/css/layerslider.css" %}" type="text/css">
+        <!-- External libraries: jQuery & GreenSock -->
+        <script src="{% static "layerslider/js/jquery.js" %}" type="text/javascript"></script>
+        <script src="{% static "layerslider/js/greensock.js" %}" type="text/javascript"></script>
+        <!-- LayerSlider script files -->
+        <script src="{% static "layerslider/js/layerslider.transitions.js" %}" type="text/javascript"></script>
+        <script src="{% static "layerslider/js/layerslider.kreaturamedia.jquery.js" %}" type="text/javascript"></script>
+
+        <script src="{% static "js/bootstrap.min.js" %}" type="text/javascript"></script>
+
+
+        <!-- bxSlider Javascript file -->
+        <script src="{% static "js/jquery.bxslider.js" %}"></script>
+        <script>
+        $(document).ready(function(){
+        $('.bxslider').bxSlider({
+
+                                pager: false,
+                                controls: true,
+                                auto: true
+
+
+                                });
+        });
+        </script>
+
+
+
+        <link rel="stylesheet" type="text/css" href="{% static "lightbox/jquery.fancybox.css" %}" media="screen" />
+        <script src="{% static "lightbox/jquery.fancybox.js" %}"></script>
+        <script type="text/javascript">
+                $(document).ready(function() {
+
+                    $('.fancybox').fancybox();
+
+                });
+        </script>
+
+
+        <!-- GOTO TOP JQUERY -->
+        <script type="text/javascript">
+        $(function() {
+            $(window).scroll(function() {
+                if($(this).scrollTop() != 0) {
+                    $('#gotop').fadeIn();
+                } else {
+                    $('#gotop').fadeOut();
+                }
+            });
+
+            $('#gotop').click(function() {
+                $('body,html').animate({scrollTop:0},800);
+            });
+        });
+        </script>
+
+
+
+        <!-- HEADER JQUERY -->
+        <script type="text/javascript">
+        $(function() {
+            $(window).scroll(function() {
+                if($(this).scrollTop() >= 200) {
+                    $('.header').addClass("header_fix");
+                } else {
+                   $('.header').removeClass("header_fix");
+                }
+            });
+        });
+        </script>
+
+
+        <script type="text/javascript">
+
+        if($(window).width() <= 900){
+        $(document).ready(function() {
+
+
+
+                    $('.mobile .title').click(function() {
+
+                                                $(this).next("ul").slideToggle();
+                                                $(this).toggleClass("minus");
+
+                                                });
+
+
+
+                });
+
+        }
+        </script>
+
+</head>
+
+<body>
+
+
+
+        <div class="header">
+        <div class="container">
+
+                    <a href="/strife/" class="logo"><img src="{% static "images/home.png" %}" alt="" /></a>
+
+                    <div class="nav mobile">
+                    <div class="title">Menu <span class="fa "></span></div>
+                    <ul>
+                    </ul>
+                    </div>
+
+        </div>
+        </div>
+        <div class="common_section" id="register">
+        <div class="container">
+
+                    <h2>QUIZ REGISTRATION</h2>
+                    <h4>This is for candidates to get participation in the quizes organized on Strife</h4>
+
+
+                    <br clear="all" />
+
+
+                    <form method="POST" id="candidate" class="hpform" action="/strife/register/">
+                    <input type="text" name="roll" placeholder="Roll Number/Mobile" required>
+                    <input type="text" name="name" placeholder="Candidate Name" required>
+                    <input type="email" name="email" placeholder="Candidate Email" required>
+                    <!--<select form="candidate" name="compname">
+                            <option value="Hello">Hello</option>
+                    </select>-->
+                    <label class="label-agree-term">Select Competition Name</label>
+                    <select form="candidate" name="compname">
+                        {% for x in compname %}
+                        <option value="{{ x|safe }}">{{ x|safe }}</option>
+                        {% endfor %}
+                    </select>
+                    <input type="text" name="course" placeholder="Course" required>
+                    <input type="text" name="bra" placeholder="Branch/Field Of Study" required>
+                    <input type="text" name="inst" id="inst" placeholder="Institute Name" required>
+                    <input type="submit" name="submit" id="submit" class="submit" value="REGISTER" />
+                    </form>
+
+
+
+
+        </div>
+        </div>
+        <div class="common_section">
+        <div class="container">
+
+
+                    <a href="#" class="footer_logo"><img src="{% static "images/footer.png" %}" alt="" /></a>
+
+                    <div class="copyright">Copyright 2019 -
+                    <a href="http://www.strife.co.in/">www.strife.co.in</a>.<br><br>Please read our 
+                    <a href="/about-us/">Privacy Policy</a>.</div>
+                    
+        </div>
+        </div>
+
+
+        </div><!--wrapper-->
+
+
+        <script>
+            jQuery("#layerslider").layerSlider({
+                responsive: false,
+                responsiveUnder: 1100,
+                layersContainer: 1100,
+                skin: 'fullwidth',
+                hoverPrevNext: false,
+                skinsPath: 'layerslider/skins/'
+            });
+
+
+        </script>
+
+        <script src="{% static "js/wow.js" %}"></script>
+        <script>
+        wow = new WOW(
+          {
+            animateClass: 'animated',
+            offset:       100
+          }
+        );
+        wow.init();
+        document.getElementById('moar').onclick = function() {
+          var section = document.createElement('section');
+          section.className = 'section--purple wow fadeInDown';
+          this.parentNode.insertBefore(section, this);
+        };
+        </script>
+
+        <script type="text/javascript">
+        $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+        $('html,body').animate({
+        scrollTop: target.offset().top - 132
+        }, 2000);
+        return false;
+        }
+        }
+        });
+        });
+        </script>
+
+
+        <script type="text/javascript">
+
+
+        $(document).ready(function() {
+
+        if($(window).width() <= 1200){
+
+
+        $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+        $('html,body').animate({
+        scrollTop: target.offset().top - 132
+        }, 2000);
+        return false;
+        }
+        }
+        });
+        });
+
+
+
+        }
+
+        });
+
+
+        </script>
+
+
+
+{{ alert|safe }}
+</body>
+</html>
